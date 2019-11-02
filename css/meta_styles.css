@@ -1,0 +1,517 @@
+#color_finder{
+
+    color: #572c94;
+
+}
+
+
+
+#color_palettes{
+
+
+    /*retro1*/
+    color: #e8634a;
+    color: #fad481;
+    color: #425866;
+    color: #303440;
+    color: #f6e7c3;
+    color: #f2a154;
+
+}
+
+
+
+/* META Styles: Body, game_wrapper, game_menu and start screen - stuff that's 'meta' to the game's desktop environment  */
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    width:100%;
+    display:table;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    /*!*background-color: #424345;*!*/
+
+    font-size: 14pt;
+    margin:0;
+
+}
+
+/*HEADER STUFF------------------------------------------------*/
+
+#main{
+
+    width:100%;
+    margin:0;
+    min-width: 1024px;
+
+
+}
+
+#book_wrapper{
+
+    width:100%;
+    min-width:1024px;
+
+
+}
+
+#chapter1_region{
+
+    position:relative;
+    width:100%;
+
+}
+
+#header{
+
+    height:2400px;
+    /*background-color: #D35C37;*/
+    width:100%;
+    /*padding-right:20px;*/
+
+}
+
+#title_container{
+    height:1200px;
+    width:100%;
+
+}
+
+.firstTitleFont{
+
+    font-family: 'Abril Fatface', cursive;
+
+}
+
+.secondTitleFont{
+
+    font-family: 'Yesteryear', cursive;
+
+}
+
+#book_head_image{
+
+    position:absolute;
+    object-fit: cover;
+    height:1200px;
+    width:100%;
+
+}
+
+#book_image_filter{
+    position:absolute;
+    height:1200px;
+    width:100%;
+    background-color: #303440;
+    -webkit-filter: opacity(1);
+    filter: opacity(1);
+
+
+}
+
+#book_title_equation_box{
+
+    position:absolute;
+    height:1200px;
+    width:100%;
+
+
+}
+
+#book_title_equation{
+
+    position:absolute;
+    width:100%;
+    color: #425866;
+    margin-top:330px;
+    font-size:150px;
+
+}
+
+
+
+#book_title{
+
+    position:absolute;
+    width:100%;
+    margin-top:175px;
+    text-align: center;
+
+}
+
+#book_title_first_line{
+
+    font-size: 80px;
+    color: #fad481;
+    /*position:absolute;*/
+
+}
+
+
+#book_title_second_line{
+
+    font-size: 50px;
+
+
+}
+
+#book_title_third_line{
+
+    align-content: center;
+
+
+
+}
+
+#book_title_Algebra{
+
+    font-size: 150px;
+    display:inline-block;
+    color: #e8634a;
+
+}
+
+#book_title_Of{
+
+    font-size: 75px;
+    display:inline-block;
+    /*margin-right:5px;*/
+
+}
+#book_title_fermat{
+
+    font-size: 85px;
+    display:inline-block;
+    margin-right:20px;
+    color: #e8634a;
+
+}
+
+#book_title_last{
+
+    font-size: 85px;
+    display:inline-block;
+    margin-left:10px;
+    color:#e8634a;
+
+
+}
+
+#book_title_fourth_line{
+
+    font-size: 60px;
+
+}
+
+#book_title_fifth_line{
+
+    font-size: 85px;
+
+}
+
+#book_title_theorem{
+
+    font-size: 85px;
+    display:inline-block;
+    color:#e8634a;
+    /*margin-right:40px;*/
+
+
+}
+
+
+/*NOTE TO READER------------------------------------------------*/
+
+#note_to_reader{
+
+    min-height:1200px;
+    width:100%;
+
+
+}
+
+#note_to_reader_heading{
+
+    margin-top:50px;
+    font-size: 30px;
+    text-align: center;
+    width:100%;
+    color:black;
+
+}
+
+
+
+/*TOC STYLES------------------------------------------------*/
+
+#toc{
+
+    min-height:1000px;
+
+
+}
+
+#toc_title{
+
+    text-align: center;
+
+}
+
+
+/*BOOK DIVIDER STYLES------------------------------------------------*/
+
+
+.bookdivider{
+
+    min-height: 1800px;
+    text-align: center;
+    margin:0;
+
+}
+
+.bookdivider_title_lev1{
+
+    font-family:'Tangerine',serif;
+    font-size: 40pt;
+    border-bottom: 3pt solid black;
+
+}
+
+.bookdivider_title_lev2{
+
+    font-family:'Abril Fatface', cursive;
+    font-size: 100pt;
+
+}
+
+
+
+
+/*PART DIVIDER STYLES------------------------------------------------*/
+
+.partDivider{
+
+    min-height: 800px;
+    text-align: center;
+    margin:0;
+
+}
+
+.partTitle{
+
+    font-family:'Abril Fatface', cursive;
+    font-size: 60pt;
+    color:grey;
+    border-top:2pt solid grey;
+    border-bottom:2pt solid grey;
+
+}
+
+
+/*CHAPTER STYLES (GENERAL) ------------------------------------------------*/
+
+.chapter{
+
+    width:100%;
+
+
+}
+
+/*.chapter_head_image{*/
+
+    /*position:absolute;*/
+    /*object-fit: cover;*/
+    /*height:700px;*/
+    /*width:100%;*/
+    /*z-index: -2;*/
+
+/*}*/
+
+
+
+/*.chapter_inner_box{*/
+
+    /*width:700px;*/
+    /*margin:auto;*/
+
+/*}*/
+
+.chapter_heading{
+
+    height:700px;
+    width:100%;
+    margin-bottom:30px;
+    /*background-color: #e8634a;*/
+    padding-right:20px;
+    /*-webkit-filter: opacity(0.99);*/
+    /*filter: opacity(0.99);*/
+
+    /*position:absolute;*/
+
+}
+
+/*.head_image_filter{*/
+    /*position:absolute;*/
+    /*height:700px;*/
+    /*width:100%;*/
+    /*background-color: #e8634a;*/
+    /*-webkit-filter: opacity(.9);*/
+    /*filter: opacity(.9);*/
+    /*z-index: -1;*/
+
+
+/*}*/
+
+.chapter_heading_spacer{
+
+    height:50px;
+    /*background-color: #e8634a;*/
+
+}
+
+.chapter_heading_number{
+
+
+    /*margin-top:20px;*/
+    font-size:30px;
+    width:100%;
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+    text-align: center;
+    font-family:'Abril Fatface', cursive;
+    /*font-family:'Yesteryear', cursive;*/
+    border-bottom: 5px solid black;
+    /*background-color: #e8634a;*/
+
+}
+
+.chapter_heading_title_container{
+
+
+    margin-left:auto;
+    margin-right:auto;
+
+    margin-top:75px;
+    border: 1px solid black;
+    border-radius:50%;
+    width: 300px;
+    height: 300px;
+
+
+    /*font-size:40px;*/
+    /*text-align: center;*/
+    /*font-family:'Abril Fatface', cursive;*/
+    /*!*font-family:'Alfa Slab One', Cursive;*!*/
+    /*padding:75px;*/
+    /*color:white;*/
+    /*background-color: #303440;*/
+
+}
+
+
+.chapter_head_image{
+
+    position:absolute;
+    object-fit: cover;
+    border-radius:50%;
+    width: 300px;
+    height: 300px;
+
+}
+
+.chapter_heading_title{
+
+    font-size:50px;
+    text-align: center;
+    font-family:'Abril Fatface', cursive;
+    /*font-family:'Alfa Slab One', Cursive;*/
+    padding:75px;
+    color:white;
+
+
+}
+
+
+.chapter_body{
+
+    width:700px;
+    margin:auto;
+
+    text-align:justify;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+
+    font-family:'Lora',serif;
+    font-size:15pt;
+
+
+}
+
+.chapter_body_wide{
+
+    width:100%;
+    background-color: #fad481;
+    font-size: 15pt;
+
+
+}
+
+.chapter_body_wide div{
+
+    width:200px;
+    margin:auto;
+
+    text-align:justify;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+
+    padding-top:50px;
+    padding-left:30px;
+    padding-bottom: 50px;
+    font-family: 'Cormorant Upright', serif;
+    color: #472712;
+
+    border-left:3px solid white;
+
+}
+
+
+.first_Letter {
+
+    /*border: 2px solid black;*/
+    float: left;
+    line-height:0.5;
+    font-family:'Old Standard TT', serif;
+    margin: 0.26em 0.15em 0.1em 0;
+    font-size:2.8em;
+
+
+}
+
+.section_title{
+
+    text-align:center;
+    font-family:'Abril Fatface', cursive;
+    font-size: 30px;
+    margin-top: 150px;
+    margin-bottom:75px;
+    border-bottom: 1px solid black;
+
+
+
+}
+
+

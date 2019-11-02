@@ -1,0 +1,165 @@
+
+<div class="chapter_heading chapter1_styles">
+
+    <!--REFERENCE TO IMAGE: https://sk.wikipedia.org/wiki/S%C3%BAbor:The_Chapel_Emmanuel_College2.jpg-->
+    <!--<img class="chapter_head_image" src="../../../images/The_Chapel_Emmanuel_College2.jpg">-->
+    <!--<div class="head_image_filter"></div>-->
+    <div class="chapter_heading_spacer"></div>
+    <div class="chapter_heading_number"> - Chapter One - </div>
+
+
+    <div class="chapter_heading_title_container chapter1_styles">
+        <img class="chapter_head_image" src="../../../images/loch-ness-monster-drawing-51.jpg">
+    </div>
+
+    <div class="chapter_heading_title">A Monstrosity</div>
+
+</div>
+
+<!--<div class="chapter_inner_box">-->
+
+<div class="chapter_body">
+
+<div class="section_title">1.1 The "Marvelous" Proof</div>
+
+<p><span class="first_Letter">I</span>t's hard to imagine how a 3 day lecture on mathematics, covering the topics of
+    "Modular forms", "elliptic curves" and "Galois representations" could have built to a suspenseful climax. But according to
+    Amir Azcel's telling of the story, that's exactly what happened. In his book <i>Fermat's Last Theorem:
+        Unlocking the Secret of an Ancient Mathematical Problem</i>, Azcel describes how Andrew Wiles had arrived
+    at a conference in Cambridge to give three one hour lectures in June of 1993. At the end of his first day of lecturing, Wiles
+    had proved an impressive result, but he still had two lectures left to give. At the end of day two few still
+    had any idea that his lectures were building towards something momentous. But there was sufficient curiosity among
+    his fellow mathematicians that when the time for his third and final lecture came, Wiles had to push through a crowd of folks
+    to get to the front of the room. It wasn't until the end of the third lecture that everyone in attendence &#8212;
+    and soon the whole world &#8212; came to understand what Wiles had done. He had just given a proof of Fermat's Last Theorem, arguably the most
+    infamous unsolved problem in all of mathematics at that time.</p>
+
+<p>As a 10 year old boy, Wiles had learned about the famous problem that Pierre de Fermat had written into the margins of his copy of <i>Arithmetica</i>
+    in 1637:</p>
+
+</div>
+
+<div class="chapter_body_wide">
+
+<div>It is impossible to separate a cube into two cubes, or a fourth power into two fourth powers,
+    or in general, any power higher than the second, into two like powers. I have discovered a
+    truly marvelous proof of this, which this margin is too narrow to contain.</div>
+
+</div>
+
+<div class="chapter_body">
+
+    <p>In modern notation, Fermat's Last Theorem states that the equation</p>
+    <p id="fermat_eq_chpt1">$$x^n + y^n = z^n$$</p>
+    <p>has no non-trivial solutions in $\mathbb{Z}$ for $n \geq $ 3.</p>
+
+<p>If you stare at this equation long enough, and if you have the right sort of intellectual bent,
+    you just might find yourself wondering how to prove the damn thing. If you are insufficiently
+    experienced with equations like it, found in the field of Diophantine Geometry, you might also
+    find yourself wondering how it possibly took mathematicians 350 years to solve. It is, after all,
+    just an equation. An equation with only <i>three</i> variables.</p>
+
+<p> At this point you might be tempted to take a peak at Wiles proof &#8212; to learn the "trick" that
+    finally fell the beast. The good news is that it's rather easy to track down a copy of the
+    proof online. The bad news is, and I hate to be the one to break it to you my dear reader,
+    the proof is over 200 pages long. And what's worse, each of
+    those pages is a minefield of technical definitions and theorems that could take even the best
+    graduate students weeks or months to digest.</p>
+
+    <p> The proof isn't a nod to the idea of mathematical elegance - it's a monstrosity. And, if we are being frank,
+the result itself (that is, the statement of the theorem) isn't event something most mathematicians care about. Carl Friedrich Gauss,
+        arguably the greatest mathematician of all time, once wrote</p>
+
+        <p id="gauss_quote1"><i>I confess that Fermat’s Theorem as an isolated proposition has very little interest for me, because I could easily
+            lay down a multitude of such propositions, which one could neither prove nor dispose of.</i></p>
+
+    <p> So why should anyone care about Fermat's Last Theorem? Why bother reading (for you), or writing (for me),
+        a "Field Guide" to a highly technical proof for a result that holds little interest to most professional mathematicians?
+        Because I believe that this "monstrous" proof provides an opportunity. To see how even something as unremarkable as Fermat's
+        "theorem" could give rise to an emergent order so interesting and complicated that over three centuries to untangle.</p>
+
+    <p> Going forward then, we look at FLT not as a destination, but as both a starting point and an end point -
+        something that nudges us on our way and also pulls us forward on a strange journey. We must
+        not expect to encounter some great treasure buried deep in the heart of a jungle, some key to
+        seeing the whole thing differently - but instead we encounter the jungle itself in all its majesty.</p>
+
+    <p> It should go without saying that at the end of this journey we won't emerge mathematicians anymore than someone
+        who takes apart a car to study its pieces is a mechanic. But we will have, at least, what the physicist Richard Feynman
+        referred to as the <i>pleasure of finding things out</i>.</p>
+
+
+
+</div>
+
+
+
+
+<div class="chapter_body">
+
+<div class="section_title">1.2 Preliminary Observations</div>
+
+    <p>It seems worthwhile to stop, before proceeding in the footsteps of others, and think for a few moments about Fermat's "equation."
+    What might we say about it, if we'd only just laid eyes on the thing a few moments ago?</p>
+
+
+    <p>The first point to make about Fermat's Last Theorem is that it is obviously untrue for $n = 2$.
+        We know this because every student is taught in their first course in geometry about the many whole number solutions of
+        the Pythagorean Theorem, which is exactly Fermat's equation with $n = 2$. These so-called <i>Pythagorean Triples</i> include, for example,
+        $(3,4,5)$, since
+
+        $$3^2 + 4^2 = 9 + 16 = 25 = 5^2 $$ </p>
+
+   <p> Now knowing nothing more than basic algebra and the existence of the triple $(3,4,5)$ we are in a position to prove the following result.<p>
+
+
+    <div class="math_result"><div class="result_title">Observation 1.1</div> The Pythagorean equation $x^2 + y^2 = z^2$ has an infinite number of non-trivial solutions in $\mathbb{Z}$.</div>
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+         We know that $(3,4,5)$ is a solution to this equation. That is
+
+        $$3^2 + 4^2 = 5^2 $$
+
+        Let's now multiply the entire equation by $n^2$
+
+        $$ n^2 3^2 + n^2 4^2 = n^2 5^2 $$
+
+        Which we can rewrite as
+
+        $$ (3n)^2 + (4n)^2 = (5n)^2 $$
+
+        In other words, $(3n,4n,5n)$ is also a solution to the equation, for any $n$. In fact, this holds for all $n$, so we have our infinite
+        set of solutions.
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+    <p> What was the point of this little exercise? Well, one thing to note is how easy it is to prove that there are
+        an infinite number of solutions if you already have one to work with. The same argument we applied here for $n=2$
+        will work for any $n$. But as we shall see, proving that these same equations have no solutions for a particular $n$ is hard.
+        It's nontrivial, if still "elementary" to prove this is so for $n=4$. It's less elementary to prove it for $n=3$.
+        For a certain class of primes known as 'regular primes' it becomes more challenging, requiring the machinery of abstract
+        algebra. For the remaining primes it requires a lot of machinery from what we now think of is arithmetic geometry -
+        a field of study that requires students to spend years studying topics in number theory, algebraic geometry, and
+        algebraic number theory.</p>
+
+
+
+</div>
+
+
+<div class="chapter_body">
+
+    <div class="section_title">1.3 There Be Dragons</div>
+
+    <p>[Where we are headed: retracing earliest attempts, building up understanding of basic abstract algebra before moving on to
+        the modern approach, which will involve A LOT of machinery...]</p>
+
+</div>
+
+
+    <!--</div>-->
+
+

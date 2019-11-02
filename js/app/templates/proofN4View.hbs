@@ -1,0 +1,129 @@
+<div class="chapter_heading chapter3_styles">
+
+    <!--REFERENCE TO IMAGE: https://sk.wikipedia.org/wiki/S%C3%BAbor:The_Chapel_Emmanuel_College2.jpg-->
+    <!--<img class="chapter_head_image" src="../../../images/The_Chapel_Emmanuel_College2.jpg">-->
+    <!--<div class="head_image_filter"></div>-->
+    <div class="chapter_heading_spacer"></div>
+    <div class="chapter_heading_number"> - Chapter Three - </div>
+
+
+    <div class="chapter_heading_title_container chapter1_styles">
+        <img class="chapter_head_image" src="../../../images/loch-ness-monster-drawing-51.jpg">
+    </div>
+
+    <div class="chapter_heading_title">An Elementary Proof</div>
+
+</div>
+
+<!--<div class="chapter_inner_box">-->
+
+<div class="chapter_body">
+
+    <div class="section_title">Section 3.1 - FLT(4)</div>
+
+    <p><span class="first_Letter">T</span>his chapter consists entirely of a proof for Fermat's Last Theorem in the case of n=4.
+        It turns out that this is in fact the simplest case to prove, simpler than n=3, which is why
+        we've leapfrogged the latter for the time being.</p>
+
+    <p>A reminder of what we want to prove:</p>
+
+
+    <div class="math_result">
+        <div class="result_title">Theorem 3.1 (FLT(4))</div>
+        The equation $x^4 + y^4 = z^4$ has no solutions with (x,y,z) all nonzero integers.</div>
+
+    Now to prove the theorem we will proceed in two parts: first, proving a slightly modified version of the FLT(4)
+    equation, and then proving a corollary of this result that implies the above theorem.
+
+    The next theorem states that the FLT(4) equation still holds when we change the exponent of $z$ from a 4 to a 2:
+
+    <div class="math_result">
+        <div class="result_title">Theorem 3.2 (Modified FLT(4))</div>
+        The equation $x^4 + y^4 = z^2$ has no solutions with (x,y,z) all nonzero integers.</div>
+
+
+
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+        <p>We'll do proof by contradiction here. Assume there is a positive integral solution (a,b,c).
+        Note that if (a,b,c) were a Pythagorean Triple, then by Theorem \ref{reducedTriple} we know we
+        can always find a reduced form for this triple, assuming it isn't already reduced. The equation
+        at hand isn't the Pythagorean equation, but a similar argument used to prove the latter theorem
+        can be applied to assert that we can always find a reduced form for (a,b,c) with (a,b) =1
+        (exercise for the reader). So we will just call this reduced solution (a,b,c). Let's also assume
+            that of all such valid reduced solutions we've selected one with the smallest value for c > 0.</p>
+
+        <p>Note we have that $(a^2)^2 + (b^2)^2 = c^2$ by assumption. Also note that since $(a,b)=1$ this
+        means $(a^2,b^2)=1$ (if they shared no common factors before they won't share any after squaring).
+        Thus $(a^2,b^2,c)$ is a Primitive Pythagorean Triple with $a^2$ odd, $b^2$ even and $c$ odd by
+            Lemma \ref{PPTevenodd}. Assume $a$ is odd, so $b$ is even and $c$ is odd.</p>
+
+        <p>By Theorem 2.1, we know that:</p>
+
+        <p>(1) $a^2 = m^2 - n^2$</p>
+
+        <p>(2) $b^2 = 2 m n $</p>
+
+        <p>(3) $z = m^2 + n^2$</p>
+
+        <p>with (m,n) = 1.</p>
+
+        <p>Ok, we can stop here for a minute and ask what the point of rewriting our assumed solution as
+        equations in m,n does for us. Well if we look at the form of the first equation we another
+        Pythagorean equation ($a^2 + n^2 = m^2)$. So what if we try to apply the same steps we applied to
+        $(a^2,b^2,c)$ to this new equation? Our hope is that we can find a way to construct a new solution
+        that somehow contradicts our original assumptions (in fact, the assumption it will contradict is
+            that c > 0 is the smallest possible c that can be used in a solution).</p>
+
+        <p>So, with that in mind, let's proceed.</p>
+
+        [FINISH]
+
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+    <p>Ok, so we've just shown that the modified FLT(4) theorem is true, but what does that tell us
+        about FLT(4) itself? We will prove that Theorem 3.2 implies Theorem 3.1</p>
+
+
+
+    <div class="math_result">
+        <div class="result_title">Corollary 3.1</div>
+        The equation $x^4 + y^4 = z^2$ has no solutions with (x,y,z) all nonzero integers.</div>
+
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+
+        <p>Let (a,b,c) (all nonzero integers) be a solution of $x^4 + y^4 = z^4$. Let $d = c^2$, noting
+        that $d$ is also an integer. Then we have $a^4+b^4=d^2$ for (a,b,d) all nonzero integers, which
+            contradicts Theorem 3.2.</p>
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+
+
+
+        <p>And we are done. We've successfully proven that FLT(n=4) is true. To prove the general theorem,
+            we need only provide proofs for $n=3,5,6,7,...\infty$. No big deal!</p>
+
+        <p>In fact, one of the points of this exercise, besides warming up some elementary number theory
+        skills a bit, is to see how \textit{ad hoc} the proof is for n=4. It relies on the fact that you
+        can rewrite the case for n=4 in terms of squares. But you can already see that for n=3 you can't just
+            reuse this same trick - there's no way to rewrite $n^3$ for n an integer as the square of some other integer.</p>
+
+        <p>It turns out there are also different \textit{ad hoc} proofs for n=3 (which we'll get to), n=5, n=6,
+            n=7, as well as several others.</p>
+
+        <p>Now to move beyond these one-off types of attacks we will need to delve into some abstract algebra.
+        The machinery we will build up may be overkill for some cases, such as n=3, but will serve us well as
+            we proceed to ever more sophisticated approaches needed for other values of n.</p>
+
+</div>

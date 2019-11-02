@@ -1,0 +1,266 @@
+
+<div class="chapter_heading whatfermatknew_styles">
+
+    <!--REFERENCE TO IMAGE: https://sk.wikipedia.org/wiki/S%C3%BAbor:The_Chapel_Emmanuel_College2.jpg-->
+    <!--<img class="chapter_head_image" src="../../../images/The_Chapel_Emmanuel_College2.jpg">-->
+    <!--<div class="head_image_filter"></div>-->
+    <div class="chapter_heading_spacer"></div>
+    <div class="chapter_heading_number"> - Chapter Two - </div>
+
+
+    <div class="chapter_heading_title_container">
+        <img class="chapter_head_image" src="../../../images/fermat_pic.jpeg">
+    </div>
+
+    <div class="chapter_heading_title">What Fermat Knew</div>
+
+</div>
+
+<!--<div class="chapter_inner_box">-->
+
+<div class="chapter_body">
+
+    <div class="section_title">2.1 Number Theory Circa the 17th Century</div>
+
+
+    <p>Before tackling Fermat's Last Theorem it's instructive to consider what existing mathematical
+        results were available to Fermat in the 17th century.
+
+    [diaphonine eqs]
+
+    [early NT from greeks]
+
+    [but he'd invent much of the field himself, with Euler and others of his time]
+
+    </p>
+
+
+
+    <div class="section_title">2.2 On Parity</div>
+
+
+<p> In trying to prove results about equations like those appearing in FLT, there's a lot that can be leveraged simply from
+    basic properties of parity. Parity simply refers to whether an integer is even (i.e., it can be written as $2n$ for
+    some integer $n$) or odd (i.e., it can be written as $2n+1$ fo some integer $n$). As we shall see, many of the more "elementary"
+    proofs related to FLT often involve deducing that certain terms in an equation must be even, while others must be odd,
+    which follow from the basic structure of even and odd numbers. </p>
+
+
+
+<p>Using only the definitions mentioned above for odd and even numbers it is possible to prove the basic
+    results most people learn in a high school algebra class:</p>
+
+
+    <p>(1) even $\pm$ even = even</p>
+
+    <p>(2) even $\pm$ odd = odd</p>
+
+    <p>(3) odd $\pm$ odd = even</p>
+
+    <p>(4) even x even = even</p>
+
+    <p>(5) even x odd = even</p>
+
+    <p>(6) odd x odd = odd</p>
+
+
+
+<p>The "proofs" for these "facts" are left to the reader. It turns out that these basic results and a little modular arithmetic can be
+    leveraged quite a bit in grappling with equations like the Pythagorean equation.  To avoid having to deduce some less obvious results about the squares of odd and even numbers on the fly,
+    we prove some of them here. These will be of use to us in a later proof.</p>
+
+
+    <div class="math_result">
+        <div class="result_title">Observation 2.1</div>If $n^2$ is even for some integer $n$, then $n^2$ is divisible by 4 (without remainder).</div>
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+        Let $n^2$ be an even number. Note that from (4)-(6) above we can deduce that $n$ must also be even.
+        This means we can write it as $2i$ for some integer $i$.
+        Then $n^2 = (2i)^2 = 4i^2$. So $n^2$ is divisible by 4 (without remainder).
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+    <div class="math_result">
+        <div class="result_title">Observation 2.2</div>
+        The square of an odd number is equal to 1 mod 4.</div>
+
+    <div class="math_proof"><p><span class="proof_title">Proof</span>
+
+        Let $n$ be an odd number. We can write it as $2i+1$ for some integer $i$.</p>
+        <p>Then $n^2 = (2i+1)^2 = 4i^2 + 4i + 1 = 4(i^2+i)+1 $.
+            Dividing by 4 yields a remainder of 1.
+
+
+            <span class="qed_tag">Q.E.D.</span></p>
+
+    </div>
+
+
+
+
+    <div class="section_title">2.3 Euclid's Formula for Pythagorean Triples</div>
+    <p>A result that will be used later in proving Fermat's Last Theorem for n=4 comes by way of Euclid. First, a few definitions:</p>
+
+    <div class="math_result">
+        <div class="result_title">Definition 2.1</div>
+        A <b>Pythagorean Triple</b> is a set of nonzero integers (a,b,c) satisfying $a^2 + b^2 = c^2$.</div>
+
+
+    <div class="math_result">
+        <div class="result_title">Definition 2.2</div>
+        A <b>Primitive Pythagorean Triple</b> (PPT) is a set of nonzero integers (a,b,c) satisfying $a^2 + b^2 = c^2$, with a, b, c all co-prime (pairwise).</div>
+
+    <div class="math_result">
+        <div class="result_title">Observation 2.3</div>
+        A Pythagorean Triple can always be reduced (by dividing out common factors) to a Primitive Pythagorean Triple.</div>
+
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+        Suppose we have (a,b,c) not all co-prime that satisfy $a^2 + b^2 = c^2$. For any common prime divisors of a,b, and c it's
+        trivial to show we can factor them out of the equation and retain a solution. But what about common divisors to only 2 of
+        the 3? Suppose we have a prime p that divides a and b. Then we can factor it out on the left side of the equation as
+        $p((g)^2 + (h)^2)$. But the equality with $c^2$ means that p must also divide $c^2$ (and thereby also $c$). If,
+        on the other hand $a$ and $c$ share a common factor we can rearrange the equation as $c^2 - a^2 = b^2$ and the same
+        arguments apply. In this way we can reduce (a,b,c) to some triple (x,y,z) with no common factors, but which still
+        satisfy the Pythagorean equation.
+
+
+            <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+
+<p>Before proving Euclid's Formula, we prove the following Lemma.</p>
+
+
+
+    <div class="math_result">
+        <div class="result_title">Lemma 2.1</div>
+        Suppose (a,b,c) is a PPT. Exactly one of a,b are odd (with the other even) and c is odd.</div>
+
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+        Since $(a,b) = 1$ (true for any PPT), then they cannot both be even.
+        Assume $a$ is odd. We will show $b$ must be even. Suppose $b$ is also odd.
+        This implies  $a^2 + b^2 = c^2$ is even, since $(odd)^2 + (odd)^2 = odd + odd = even)$.
+        If $c^2$ is even then it is evenly divisible by 4 by Theorem 2.1. On the other hand, by
+        Theorem 2.2 we see that the square of an odd is 1 mod 4, so the sum of two such squares is 2 mod 4.
+        Thus we have $a^2 + b^2 = 2$ mod 4 $\ne 0 = c^2$ mod 4, which is a contradiction. This means that $b$
+        must be even, which further implies (by parity results) that $c^2$ odd.
+
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+
+
+Now we are ready to prove Euclid's Formula for Primitive Pythagorean Triples.
+
+
+    <div class="math_result">
+        <div class="result_title">Theorem 2.1 (Euclid's Formula)</div>
+        <p>Let (a,b,c) be a Primitive Pythagorean Triple. Then there exists integers $ m > n > 0$ , with $(m,n)=1$, such that:</p>
+
+        <p>(1) $a = m^2 - n^2$</p>
+
+        <p>(2) $b=2mn$</p>
+
+        <p>(3) $c = m^2 + n^2$</p>
+    </div>
+
+
+    <div class="math_proof"><span class="proof_title">Proof</span>
+
+        <p>By Lemma 2.1 we can assert that $a$ is odd, $b$ is even and $c$ is odd.
+            Now from $a^2 + b^2 = c^2$ we have $c^2 - a^2 = b^2$, from which we see that $(c-a)(c+a) = b^2$.
+            Then $\frac{(c+a)}{b} = \frac{b}{(c-a)}$. Because a,b,c are all integers we know that $\frac{(c+a)}{b}$
+            is rational and so we can assert it has the form $\frac{m}{n}$ in lowest terms.
+            Then we have that $\frac{b}{(c-a)} = \frac{n}{m}$. We therefore have two equations:</p>
+
+
+
+        <p>(1) $\frac{c}{b} + \frac{a}{b} = \frac{m}{n}$</p>
+
+        <p>(2) $\frac{c}{b} - \frac{a}{b} = \frac{n}{m}$</p>
+
+
+        <p>These can be solved to give:</p>
+
+
+
+        <p>(3) $\frac{c}{b} = \frac{1}{2}(\frac{m}{n}+\frac{n}{m}) = \frac{m^2 + n^2}{2mn}$</p>
+
+        <p>(4) $\frac{a}{b} = \frac{1}{2}(\frac{m}{n}-\frac{n}{m}) = \frac{m^2 - n^2}{2mn}$</p>
+
+
+
+        <p>Since $\frac{m}{n}$ is fully reduced, (m,n) = 1 and they cannot both be even.
+            They cannot both be odd for the following: m,n both odd implies $m^2-n^2$
+            (the numerator in (4)) is 0 mod 4 (by <i>Observation 2.1</i>).
+            And $2mn$ (the denominator) cannot be a multiple of 4 if m,n are both odd.
+            This would imply (from (4)) that </p>
+
+
+
+        <p>$a = \frac{b(m^2 - n^2)}{2mn} = \frac{4 i b}{2mn} = \frac{2 i b}{mn}$</p>
+
+
+        <p>which implies a is even, despite being defined earlier as odd.</p>
+
+        <p>So we have that one of m,n is odd and the other is even. Note we'd like the fractions
+            $\frac{a}{b}$ and $\frac{c}{b}$ to be fully reduced so we can simply equate c,a,b with the two numerators
+            and common denominator, respectively of (3) and (4). Are they?
+            Yes, because any prime $p$ dividing $2mn$ divides either m or n (since they are coprime)
+            and so cannot divide $m^2 \pm n^2$. Thus we can equate a with the numerator in (4),
+            c with the numerator in (3) and b with the denominator in both, giving the equations
+            stated in the theorem.</p>
+
+
+        <span class="qed_tag">Q.E.D.</span>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!--</p>-->
+
+        <!--<div class="section_title">The Sum of Two Squares</div>-->
+
+<!--<p>There are two results related to the sums of two squares which we'll simply state for the time being. The first was known by Fermat,-->
+        <!--though it's not clear if the second (which generalizes the first for any integer) was.-->
+
+
+<!--(Fermat's Two Square Theorem) An odd prime p (i.e., p >2) can be written as a sum of two squares: $p = a^2+b^2$ if and only if $p \equiv 1$ mod $4$.-->
+
+
+<!--(Generalization of Fermat's Two-Square Theorem) An integer greater than 1 is a sum of two squares exactly when any prime-->
+<!--factor p where $p \equiv $ 3 mod 4 occurs with even multiplicity.-->
+
+
+<!--Note that in this last theorem the constraints for N to be a sum of two squares in fact only constrain the primes equal to 3 mod 4. When no such primes are present it would appear the theorem is automatically satisfied, as Fermat's original theorem states of p equal to 1 mod 4.-->
+
+<!--Consider, as an example, consider the product of two primes which are each congruent to 1 mod 4, namely 5 and 17. Now 5*17 is $85 = 6^2 + 7^2 = 36 + 49 = 85$. Thus, for this single anecdotal result, the general theorem holds for a composite that is a product of two primes congruent to 1 mod 4.-->
+
+<!--We will prove these two theorems in a later section, which will require the use of a bit more machinery: Gaussian Integers-->
+    <!--and some basic concepts from Ring Theory. We hold off on introducing this bit of machinery and instead turn to the proof-->
+    <!--of Fermat's Last Theorem for n=4 (i.e., FLT(4)) right away, as this does not require any machinery beyond the elementary-->
+    <!--results we've already proven above.-->
+
+<!--</p>-->
+
+    </div>
+
